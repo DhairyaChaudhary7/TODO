@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTask AI - 3D Todo App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <!-- Particles -->
+    <div id="particles-js"></div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+
+    <div class="container">
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+
+            <div class="logo">
+                🚀 SmartTask AI
+            </div>
+
+            <div class="controls">
+
+                <button id="aiBtn">
+                    🤖
+                </button>
+
+                <button id="voiceBtn">
+                    🎤
+                </button>
+
+                <button id="themeBtn">
+                    🌙
+                </button>
+
+            </div>
+
+        </div>
+
+        <h1>3D Productivity Dashboard</h1>
+
+        <!-- Input Section -->
+        <div class="input-section">
+
+            <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter your task...">
+
+            <input
+            type="date"
+            id="dueDate">
+
+            <button id="addBtn">
+                Add
+            </button>
+
+        </div>
+
+        <!-- Stats -->
+
+        <div class="stats">
+
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Streak 🔥</h3>
+                <p id="streak">0</p>
+            </div>
+
+        </div>
+
+        <!-- Progress Circle -->
+
+        <div class="progress-container">
+
+            <div class="progress-circle">
+
+                <svg width="160" height="160">
+
+                    <circle
+                    class="bg"
+                    cx="80"
+                    cy="80"
+                    r="70"></circle>
+
+                    <circle
+                    class="progress"
+                    cx="80"
+                    cy="80"
+                    r="70"></circle>
+
+                </svg>
+
+                <div id="progressText">
+                    0%
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- AI Suggestion Box -->
+
+        <div class="suggestion-box">
+            <p id="suggestionText">
+                Click 🤖 for AI Task Suggestions
+            </p>
+        </div>
+
+        <!-- Task List -->
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
